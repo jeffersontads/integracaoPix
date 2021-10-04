@@ -167,7 +167,7 @@ class Payload {
     * @return string
     */
     public function getPayload() {
-        //cria o payload
+        //cria o payload, monta o variavel payload
     $payload = 
             $this->getValue(self::ID_PAYLOAD_FORMAT_INDICATOR, '01').
             $this->getMerchantAccountInformation().
@@ -180,7 +180,7 @@ class Payload {
             $this->getAdditionalDataFieldTemplate()
     ;
 
-    return $payload;
+    return $payload.$this->getCRC16($payload);
     }
 
 
