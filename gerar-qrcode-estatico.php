@@ -28,7 +28,7 @@ $image = (new Output\Png)->output($obQrCode,400);
 //podemos imprimir a imagem do qrcode e tambem o codigo
 ?>
 
-<h1>QRCODE PIX</h1>
+<h1>GERAR QRCODE ESTÁTICO DO PIX</h1>
 <br>
 <img src="data:image/png;base64, <?php echo base64_encode($image); ?>">
 <br><br>

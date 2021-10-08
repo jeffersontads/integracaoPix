@@ -105,7 +105,7 @@ class Payload {
     * @param string $pixKey
     */
     public function setTxId($txId){
-        $this->txid = $txId;
+        $this->txId = $txId;
         return $this;
     }
 
@@ -156,7 +156,7 @@ class Payload {
     */
     private function getAdditionalDataFieldTemplate() { 
         //txId
-        $txid = $this->getValue(self::ID_ADDITIONAL_DATA_FIELD_TEMPLATE_TXID, $this->txid);
+        $txid = $this->getValue(self::ID_ADDITIONAL_DATA_FIELD_TEMPLATE_TXID, $this->txId);
 
         //retorna valor completo
         return $this->getValue(self::ID_ADDITIONAL_DATA_FIELD_TEMPLATE, $txid);
